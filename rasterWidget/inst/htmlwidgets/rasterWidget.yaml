@@ -1,7 +1,8 @@
-# (uncomment to add a dependency)
-# dependencies:
-#  - name:
-#    version:
-#    src:
-#    script:
-#    stylesheet:
+dependencies:
+  - name: d3.min
+    version: 3.5.6
+    src: htmlwidgets/lib/
+    script:
+     - d3.min.js
+    stylesheet:
+     - style.css
