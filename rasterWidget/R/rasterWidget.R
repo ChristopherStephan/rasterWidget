@@ -5,11 +5,14 @@
 #' @import htmlwidgets
 #'
 #' @export
-rasterWidget <- function(message, width = NULL, height = NULL) {
+rasterWidget <- function(raster, width = NULL, height = NULL) {
 
   # forward options using x
-  x = list(
-    message = message
+   x = list(
+     dimension = dim(raster),
+     ncell = ncell(raster),
+     resolution = res(raster),
+     values = values(raster)
   )
 
   # create widget
