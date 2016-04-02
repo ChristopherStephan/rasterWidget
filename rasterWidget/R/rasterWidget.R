@@ -19,7 +19,8 @@ rasterWidget <- function(raster, width = 400, height = 400) {
      ncell = ncell(raster),
      resolution = res(raster),
      values = rasterValues,
-     classBreaks = classIntervals$brks
+     classBreaks = classIntervals$brks,
+     colors = c("yellow", "organge", "red")
   )
 
   # create widget

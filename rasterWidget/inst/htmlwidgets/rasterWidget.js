@@ -11,7 +11,9 @@ HTMLWidgets.widget({
   renderValue: function(el, x, instance) {
     
     var dat = x.values;
-
+    var classBreaks = x.classBreaks;
+    var colors = x.colors;
+    
     var z = 20,
         w = 80 * z,
         h = 115 * z,
@@ -26,7 +28,8 @@ HTMLWidgets.widget({
         .style("border", "1px solid black")
         .attr("width", canvasX)
         .attr("height", canvasY)
-        .call(d3.behavior.zoom().on("zoom", zoom)).append("g");
+        .call(d3.behavior.zoom().on("zoom", zoom))
+        .append("g");
     
     svg.selectAll("rect")
         .data(d3.range(dat.length))
@@ -43,10 +46,16 @@ HTMLWidgets.widget({
     }
     
     function zoom() {
-        svg.attr("transform", "translate(" + d3.event.translate + ")" + "   scale(" + d3.event.scale + ")")
+        svg.attr("transform", "translate(" + d3.event.translate + ")" + "scale(" + d3.event.scale + ")");
     }
     
     function colorize(d) {
+      var amountClassBreaks = classBreaks.length;
+      for (var i = 0; i < amountClassBreaks; i++) {
+        if (dat[d] < classBreaks[i])
+          return colors[i]
+      }
+ /*     
         console.log(dat[d]);
         if(dat[d] === null)
             return "white";
@@ -56,6 +65,7 @@ HTMLWidgets.widget({
             return "orange";
         else
             return "red";
+*/
     }
     
     function getCellValue(d) { 
