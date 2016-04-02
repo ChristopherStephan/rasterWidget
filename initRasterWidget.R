@@ -8,4 +8,4 @@ htmlwidgets::scaffoldWidget("rasterWidget")
 # execute again after changes in rasterWidget code
 devtools::install()  
 library(rasterWidget)
-rasterWidget(meuseRaster, 200, 200)
+rasterWidget(meuseRaster, 400, 400)

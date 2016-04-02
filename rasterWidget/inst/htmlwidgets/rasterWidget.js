@@ -23,7 +23,7 @@ var z = 20,
     x = w / z,
     y = h / z;
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#htmlwidget_container").selectAll("div").append("svg")
     .attr("width", canvasX)
     .attr("height", canvasY)
     .call(d3.behavior.zoom().on("zoom", function () {
