@@ -18,8 +18,8 @@ HTMLWidgets.widget({
 var z = 20,
     w = 80 * z,
     h = 115 * z,
-    canvasX = 400,
-    canvasY = 400
+    canvasX = x.width,
+    canvasY = x.height,
     x = w / z,
     y = h / z;
 

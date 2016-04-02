@@ -9,6 +9,8 @@ rasterWidget <- function(raster, width = NULL, height = NULL) {
 
   # forward options using x
    x = list(
+     width = width,
+     height = height,
      dimension = dim(raster),
      ncell = ncell(raster),
      resolution = res(raster),
