@@ -5,8 +5,10 @@
 #' @import htmlwidgets
 #'
 #' @export
-rasterWidget <- function(raster, width = NULL, height = NULL) {
+rasterWidget <- function(raster, width = 400, height = 400) {
 
+  
+  
   # forward options using x
    x = list(
      width = width,
