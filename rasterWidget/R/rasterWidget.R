@@ -7,7 +7,9 @@
 #' @export
 rasterWidget <- function(raster, width = 400, height = 400) {
 
-  
+  # class Intervals
+  rasterValues = values(raster)
+  classIntervals = classIntervals(na.omit(values), n=5, style="fisher")
   
   # forward options using x
    x = list(
@@ -16,7 +18,8 @@ rasterWidget <- function(raster, width = 400, height = 400) {
      dimension = dim(raster),
      ncell = ncell(raster),
      resolution = res(raster),
-     values = values(raster)
+     values = rasterValues,
+     classBreaks = classIntervals$brks
   )
 
   # create widget
