@@ -9,18 +9,18 @@ rasterWidget <- function(raster, width = 400, height = 400) {
 
   # class Intervals
   rasterValues = values(raster)
-  classIntervals = classIntervals(na.omit(values), n=5, style="fisher")
+  classIntervals = classIntervals(na.omit(rasterValues), n=5, style="fisher")
   
   # forward options using x
-   x = list(
-     width = width,
-     height = height,
-     dimension = dim(raster),
-     ncell = ncell(raster),
-     resolution = res(raster),
-     values = rasterValues,
-     classBreaks = classIntervals$brks,
-     colors = c("yellow", "organge", "red")
+  x = list(
+    width = width,
+    height = height,
+    dimension = dim(raster),
+    ncell = ncell(raster),
+    resolution = res(raster),
+    values = rasterValues,
+    classBreaks = classIntervals$brks,
+    colors = c("yellow", "orange", "darkorange", "red", "darkred")
   )
 
   # create widget

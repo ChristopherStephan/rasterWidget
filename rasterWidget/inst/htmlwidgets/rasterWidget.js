@@ -50,22 +50,13 @@ HTMLWidgets.widget({
     }
     
     function colorize(d) {
-      var amountClassBreaks = classBreaks.length;
-      for (var i = 0; i < amountClassBreaks; i++) {
-        if (dat[d] < classBreaks[i])
-          return colors[i]
+      if (dat[d] === null)
+        return "gray";
+
+      for (var i = 0; i < classBreaks.length; i++) {
+        if (dat[d] <= classBreaks[i+1])
+          return colors[i];
       }
- /*     
-        console.log(dat[d]);
-        if(dat[d] === null)
-            return "white";
-        if(dat[d] < 548)
-            return "yellow";
-        if(dat[d] < 968)
-            return "orange";
-        else
-            return "red";
-*/
     }
     
     function getCellValue(d) { 
