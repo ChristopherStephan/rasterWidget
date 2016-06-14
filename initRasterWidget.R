@@ -1,11 +1,11 @@
 install.packages("htmlwidgets")
 install.packages("devtools")
+install.packages("raster")
+install.packages("classInt")
 
-devtools::create("rasterWidget")               
-setwd("/home/christopher/Documents/git/rasterWidget/rasterWidget")                          
-htmlwidgets::scaffoldWidget("rasterWidget")    
+setwd("/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget")
 
 # execute again after changes in rasterWidget code
-devtools::install()  
+devtools::install()
 library(rasterWidget)
 rasterWidget(meuseRaster)

@@ -1,13 +1,13 @@
 library(rasterWidget)
 library(raster)
-
-rasterWidget("", 100, 100)
+library(classInt)
 
 meuseFile <- system.file("external/test.grd", package="raster")
 meuseRaster <- raster(meuseFile)
 plot(meuseRaster)
-
-values(meuseRaster)
-
 rasterWidget(meuseRaster)
 
+# execute again after changes in rasterWidget code
+devtools::install()
+library(rasterWidget)
+rasterWidget(meuseRaster)
