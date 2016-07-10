@@ -5,14 +5,14 @@
 #' @import htmlwidgets
 #'
 #' @export
-rasterWidget <- function(raster, width = 400, height = 400) {
+rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors) {
 
   # class Intervals
   rasterValues = values(raster)
-  classIntervals = classIntervals(na.omit(rasterValues), n=5, style="fisher")
-  
+  classIntervals = classIntervals(na.omit(rasterValues), n=nclass, style=style)
+
   # forward options using x
-  x = list(
+  data = list(
     width = width,
     height = height,
     dimension = dim(raster),
@@ -20,13 +20,13 @@ rasterWidget <- function(raster, width = 400, height = 400) {
     resolution = res(raster),
     values = rasterValues,
     classBreaks = classIntervals$brks,
-    colors = c("yellow", "orange", "darkorange", "red", "darkred")
+    colors = colors
   )
 
   # create widget
   htmlwidgets::createWidget(
     name = 'rasterWidget',
-    x,
+    data,
     width = width,
     height = height,
     package = 'rasterWidget'
