@@ -15,6 +15,8 @@ HTMLWidgets.widget({
     var colors = data.colors;
     var nrow = data.nrow;
     var ncol = data.ncol;
+    var xres = data.xres;
+    var yres = data.yres;
 
     var z = 20,
         w = ncol * z,
@@ -53,7 +55,7 @@ HTMLWidgets.widget({
 
     function colorize(d) {
       if (dat[d] === null)
-        return "gray";
+        return data.colNA;
 
       for (var i = 0; i < classBreaks.length; i++) {
         if (dat[d] <= classBreaks[i+1])

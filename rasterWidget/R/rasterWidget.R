@@ -5,7 +5,7 @@
 #' @import htmlwidgets
 #'
 #' @export
-rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors) {
+rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colNA="gray") {
 
   # class Intervals
   rasterValues = values(raster)
@@ -20,9 +20,12 @@ rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fishe
     nrow = nrow(raster),
     ncol = ncol(raster),
     resolution = res(raster),
+    xres = xres(raster),
+    yres = yres(raster),
     values = rasterValues,
     classBreaks = classIntervals$brks,
-    colors = colors
+    colors = colors,
+    colNA = colNA
   )
 
   # create widget
