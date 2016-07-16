@@ -11,12 +11,14 @@ rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fishe
   rasterValues = values(raster)
   classIntervals = classIntervals(na.omit(rasterValues), n=nclass, style=style)
 
-  # forward options using x
+  # forward options using data
   data = list(
     width = width,
     height = height,
     dimension = dim(raster),
     ncell = ncell(raster),
+    nrow = nrow(raster),
+    ncol = ncol(raster),
     resolution = res(raster),
     values = rasterValues,
     classBreaks = classIntervals$brks,

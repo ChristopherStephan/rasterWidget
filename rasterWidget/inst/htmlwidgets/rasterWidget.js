@@ -13,10 +13,12 @@ HTMLWidgets.widget({
     var dat = data.values;
     var classBreaks = data.classBreaks;
     var colors = data.colors;
+    var nrow = data.nrow;
+    var ncol = data.ncol;
 
     var z = 20,
-        w = 80 * z,
-        h = 115 * z,
+        w = ncol * z,
+        h = nrow * z,
         canvasX = data.width,
         canvasY = data.height,
         x = w / z,
