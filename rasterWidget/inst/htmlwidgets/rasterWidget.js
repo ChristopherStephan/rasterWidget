@@ -18,7 +18,7 @@ HTMLWidgets.widget({
     var xres = data.xres;
     var yres = data.yres;
 
-    var z = 20,
+    var z = data.width / ncol,
         w = ncol * z,
         h = nrow * z,
         canvasX = data.width,
