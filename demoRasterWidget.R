@@ -16,13 +16,22 @@ rasterWidget(meuseRaster, 500, 800, 5)
 # medium sized scene (300 x 300)
 r1 <- raster(ncol=300, nrow=300)
 r1[] <- rnorm(ncell(r1), 0, 50)
+Sys.time()
+# [1] "2016-07-17 20:54:10 CEST"
 rasterWidget(r1, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
+Sys.time()
+# [1] "2016-07-17 20:54:10 CEST"
 
 #Large Landsat7 scene (593 x 653)
 download.file(url = 'https://github.com/GeoScripting-WUR/IntroToRaster/raw/gh-pages/data/gewata.zip', destfile = 'gewata.zip', method = 'auto')
 unzip('gewata.zip')
 gewata <- raster('LE71700552001036SGS00_SR_Gewata_INT1U.tif')
+
+Sys.time()
+# [1] "2016-07-17 20:41:25 CEST"
 rasterWidget(gewata, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
+Sys.time()
+# [1] "2016-07-17 20:49:56 CEST"
 
 # debug
 r = na.omit(values(meuseRaster))
