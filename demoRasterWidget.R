@@ -15,7 +15,7 @@ rasterWidget(meuseRaster, 500, 800, 5)
 
 # medium sized scene (300 x 300)
 r1 <- raster(ncol=300, nrow=300)
-r1[] <- rnorm(ncell(r), 0, 50)
+r1[] <- rnorm(ncell(r1), 0, 50)
 rasterWidget(r1, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
 
 #Large Landsat7 scene (593 x 653)
