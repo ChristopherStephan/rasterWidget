@@ -1,1 +1,4 @@
 exportPattern("^[^\\.]")
+
+import(raster)
+import(classInt)
