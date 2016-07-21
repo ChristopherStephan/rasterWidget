@@ -1,3 +1,5 @@
+// https://jsfiddle.net/w0pusryo/
+
 HTMLWidgets.widget({
 
   name: 'rasterWidget',
