@@ -8,6 +8,7 @@ plot(meuseRaster)
 rasterWidget(meuseRaster)
 
 # execute again after changes in rasterWidget code
+setwd("/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget")
 devtools::install()
 library(rasterWidget)
 rasterWidget(meuseRaster, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
