@@ -13,7 +13,7 @@ setwd("/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget")
 devtools::install()
 library(rasterWidget)
 rasterWidget(meuseRaster, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
-rasterWidget(meuseRaster, 500, 800, 5)
+rasterWidget(meuseRaster, 500, 800, nclass=5, colors=c("yellow", "orange", "darkorange", "red", "darkred"))
 
 # medium sized scene (300 x 300)
 r1 <- raster(ncol=300, nrow=300)
