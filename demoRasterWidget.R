@@ -1,6 +1,7 @@
 library(rasterWidget)
 library(raster)
 library(classInt)
+library(devtools)
 
 meuseFile <- system.file("external/test.grd", package="raster")
 meuseRaster <- raster(meuseFile)
