@@ -1,11 +1,7 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-r:
-  - oldrel
-  - release
-  - devel
 sudo: false
 cache: packages
 before_install:
-  - cd rasterWidget/rasterWidget
+  - cd cd /home/travis/build/ChristopherStephan/rasterWidget/rasterWidget
