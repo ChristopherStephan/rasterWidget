@@ -7,3 +7,4 @@ install.packages("roxygen2")
 
 use_travis('/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget')
 devtools::document()
+devtools::use_build_ignore("rasterWidget.Rproj", escape = TRUE, pkg = "/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget")
