@@ -6,6 +6,13 @@
 \usage{
 rasterWidgetOutput(outputId, width = "100\%", height = "400px")
 }
+\arguments{
+\item{outputId}{outputId}
+
+\item{width}{width in %}
+
+\item{height}{height in px}
+}
 \description{
 Widget output function for use in Shiny
 }

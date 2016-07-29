@@ -16,11 +16,11 @@ rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
 
 \item{nclass}{number of classes required}
 
+\item{style}{chosen style: one of "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", or "jenks"}
+
 \item{colors}{a character vector for color coding the class intervals}
 
 \item{colNA}{character for the color of NA values}
-
-\item{stlye}{chosen style: one of "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", or "jenks"}
 }
 \description{
 this function produces an interactive view of the specified

@@ -3,4 +3,7 @@
 export(rasterWidget)
 export(rasterWidgetOutput)
 export(renderRasterWidget)
+import(classInt)
 import(htmlwidgets)
+import(raster)
+import(stats)
