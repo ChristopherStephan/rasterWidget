@@ -53,6 +53,8 @@ rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fishe
 
 #' Widget output function for use in Shiny
 #' 
+#' @description Widget output function for use in Shiny
+#' 
 #' @param outputId outputId
 #' @param width width in percent
 #' @param height height in px
@@ -62,6 +64,8 @@ rasterWidgetOutput <- function(outputId, width = '100%', height = '400px'){
 }
 
 #' Widget render function for use in Shiny
+#'
+#' @description Widget render function for use in Shiny
 #'
 #' @param expr expr
 #' @param env env
