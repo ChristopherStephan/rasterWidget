@@ -9,7 +9,7 @@ rasterWidgetOutput(outputId, width = "100\%", height = "400px")
 \arguments{
 \item{outputId}{outputId}
 
-\item{width}{width in %}
+\item{width}{width in percent}
 
 \item{height}{height in px}
 }
