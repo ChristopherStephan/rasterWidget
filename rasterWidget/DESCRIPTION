@@ -1,9 +1,15 @@
 Package: rasterWidget
-Title: Inspecting raster objects interactively 
+Title: Inspecting raster objects interactively
 Version: 0.0.0.9000
 Authors@R: person("Christopher", "Stephan", email = "c.stephan@uni-muenster.com", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
-Depends: R (>= 3.2.2)
+Depends:
+    R (>= 3.2.2)
 License: GPL-3
 LazyData: true
-Imports: htmlwidgets, raster, classInt, stats 
+Imports:
+    htmlwidgets,
+    raster,
+    classInt,
+    stats
+RoxygenNote: 5.0.1

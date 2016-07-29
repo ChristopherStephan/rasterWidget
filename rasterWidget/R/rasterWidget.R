@@ -1,9 +1,18 @@
-#' <Add Title>
-#'
-#' <Add Description>
+#' View raster objects interactively
+#' 
+#' @description
+#' this function produces an interactive view of the specified
+#' raster object to inspect its cell values when hovering over them.
 #'
 #' @import htmlwidgets
-#'
+#' @param raster a \code{Raster*} or \code{Spatial*} object.
+#' @param width width of the widget in px
+#' @param height height of the widget in px
+#' @param nclass number of classes required 
+#' @param stlye chosen style: one of "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", or "jenks"
+#' @param colors a character vector for color coding the class intervals
+#' @param colNA character for the color of NA values
+#' 
 #' @export
 rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colNA="gray") {
 
