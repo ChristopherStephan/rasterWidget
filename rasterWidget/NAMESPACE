@@ -1,4 +1,6 @@
 exportPattern("^[^\\.]")
 
+import(htmlwidgets)
 import(raster)
 import(classInt)
+import(stats)
