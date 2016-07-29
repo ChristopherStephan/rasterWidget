@@ -7,7 +7,7 @@
 #' @import htmlwidgets
 #' @import raster
 #' @import classInt
-#' @import stats
+#' @importFrom stats na.omit
 #' 
 #' @param raster a \code{Raster*} or \code{Spatial*} object.
 #' @param width width of the widget in px
