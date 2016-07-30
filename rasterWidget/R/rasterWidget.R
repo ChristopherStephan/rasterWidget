@@ -19,6 +19,7 @@
 #' @param colNA character for the color of NA values
 #' 
 #' @examples
+#' require(raster)
 #' meuseFile <- system.file("external/test.grd", package="raster")
 #' meuseRaster <- raster(meuseFile)
 #' rasterWidget(meuseRaster)

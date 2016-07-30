@@ -27,6 +27,7 @@ this function produces an interactive view of the specified
 raster object to inspect its cell values when hovering over them.
 }
 \examples{
+require(raster)
 meuseFile <- system.file("external/test.grd", package="raster")
 meuseRaster <- raster(meuseFile)
 rasterWidget(meuseRaster)
