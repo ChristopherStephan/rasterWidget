@@ -8,8 +8,9 @@
 #' @import raster
 #' @import classInt
 #' @importFrom stats na.omit
+#' @importFrom grDevices colorRampPalette nclass.Sturges
 #' 
-#' @param raster a \code{Raster*} or \code{Spatial*} object.
+#' @param raster a \code{Raster*} object.
 #' @param width width of the widget in px
 #' @param height height of the widget in px
 #' @param nclass number of classes required 

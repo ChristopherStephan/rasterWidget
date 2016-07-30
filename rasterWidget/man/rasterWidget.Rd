@@ -8,7 +8,7 @@ rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
   colors, colNA = "gray")
 }
 \arguments{
-\item{raster}{a \code{Raster*} or \code{Spatial*} object.}
+\item{raster}{a \code{Raster*} object.}
 
 \item{width}{width of the widget in px}
 
