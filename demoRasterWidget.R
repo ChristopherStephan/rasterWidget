@@ -6,14 +6,23 @@ library(devtools)
 meuseFile <- system.file("external/test.grd", package="raster")
 meuseRaster <- raster(meuseFile)
 plot(meuseRaster)
-rasterWidget(meuseRaster)
 
 # execute again after changes in rasterWidget code
 setwd("/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget")
 devtools::install()
 library(rasterWidget)
-rasterWidget(meuseRaster, nclass=5, style="fisher", colors=c("yellow", "orange", "darkorange", "red", "darkred"))
+rasterWidget(meuseRaster, nclass=5, style='fisher', colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
 rasterWidget(meuseRaster, 500, 800, nclass=5, colors=c("yellow", "orange", "darkorange", "red", "darkred"))
+
+rasterWidget(meuseRaster, nclass=15, style='fisher', colors=c("#FF0000", "#EC1200", "#DA2400", "#C83600", "#B64800", "#A35B00", "#916D00", "#7F7F00", "#6D9100", "#5BA300", "#48B600", "#36C800", "#24DA00", "#12EC00", "#00FF00"))
+
+rasterWidget(meuseRaster)
+rasterWidget(meuseRaster, nclass=7)
+
+r <- raster()
+r
+rasterWidget(r, nclass=5, style='fisher', colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
+
 
 # medium sized scene (300 x 300)
 r1 <- raster(ncol=300, nrow=300)
