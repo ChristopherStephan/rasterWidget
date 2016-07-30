@@ -24,7 +24,6 @@ rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fishe
   if(!missing(nclass) && !missing(colors)  && nclass != length(colors) )
     stop("Provide equal number of classes and colors.")
   
-  # class Intervals
   rasterValues = values(raster)
   
   if(missing(nclass))
