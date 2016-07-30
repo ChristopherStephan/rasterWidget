@@ -18,6 +18,14 @@
 #' @param colors a character vector for color coding the class intervals
 #' @param colNA character for the color of NA values
 #' 
+#' @examples
+#' meuseFile <- system.file("external/test.grd", package="raster")
+#' meuseRaster <- raster(meuseFile)
+#' rasterWidget(meuseRaster)
+#' rasterWidget(meuseRaster, 500, 550)
+#' rasterWidget(meuseRaster, nclass=5)
+#' rasterWidget(meuseRaster, nclass=5, colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
+#' 
 #' @export
 rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colNA="gray") {
 

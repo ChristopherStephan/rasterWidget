@@ -26,4 +26,13 @@ rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
 this function produces an interactive view of the specified
 raster object to inspect its cell values when hovering over them.
 }
+\examples{
+meuseFile <- system.file("external/test.grd", package="raster")
+meuseRaster <- raster(meuseFile)
+rasterWidget(meuseRaster)
+rasterWidget(meuseRaster, 500, 550)
+rasterWidget(meuseRaster, nclass=5)
+rasterWidget(meuseRaster, nclass=5, colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
+
+}
 
