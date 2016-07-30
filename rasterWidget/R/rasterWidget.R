@@ -20,8 +20,18 @@
 #' @export
 rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colNA="gray") {
 
+  if(!missing(nclass) && !missing(colors)  && nclass != length(colors) )
+    stop("Provide equal number of classes and colors.")
+  
   # class Intervals
   rasterValues = values(raster)
+  
+  if(missing(nclass))
+    nclass = nclass.Sturges(na.omit(rasterValues))
+    
+  if(missing(colors))
+    colors = colorRampPalette(c("yellow", "red"))(nclass)
+  
   classIntervals = classIntervals(na.omit(rasterValues), n=nclass, style=style)
 
   # forward options using data
