@@ -6,3 +6,6 @@ cache: packages
 
 before_install:
   - cd rasterWidget
+
+after_success:
+  - Rscript -e 'covr::coveralls()'
