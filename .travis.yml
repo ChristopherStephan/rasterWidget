@@ -6,6 +6,9 @@ cache: packages
 
 before_install:
   - cd rasterWidget
+  
+install:
+ - ./travis-tool.sh github_package jimhester/covr
 
 after_success:
   - Rscript -e 'covr::coveralls()'
