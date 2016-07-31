@@ -20,9 +20,9 @@ rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
 
 \item{colors}{a character vector for color coding the class intervals}
 
-\item{colNA}{character for the color of NA values}
+\item{colorsToInterpolate}{colors to interpolate}
 
-\item{colorToInterpolate}{colors to interpolate}
+\item{colNA}{character for the color of NA values}
 }
 \description{
 this function produces an interactive view of the specified
