@@ -9,6 +9,7 @@
 #' @import classInt
 #' @importFrom stats na.omit
 #' @importFrom grDevices colorRampPalette nclass.Sturges
+#' @import RColorBrewer
 #' 
 #' @param raster a \code{Raster*} object.
 #' @param width width of the widget in px

@@ -3,6 +3,7 @@
 export(rasterWidget)
 export(rasterWidgetOutput)
 export(renderRasterWidget)
+import(RColorBrewer)
 import(classInt)
 import(htmlwidgets)
 import(raster)
