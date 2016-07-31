@@ -16,6 +16,7 @@
 #' @param nclass number of classes required 
 #' @param style chosen style: one of "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", or "jenks"
 #' @param colors a character vector for color coding the class intervals
+#' @param colorToInterpolate colors to interpolate
 #' @param colNA character for the color of NA values
 #' 
 #' @examples
@@ -26,22 +27,26 @@
 #' rasterWidget(meuseRaster, 500, 550)
 #' rasterWidget(meuseRaster, nclass=5)
 #' rasterWidget(meuseRaster, nclass=5, colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
+#' rasterWidget(meuseRaster, colorsToInterpolate=c("green", "red"))
+#' require(RColorBrewer)
+#' rasterWidget(meuseRaster, colorsToInterpolate=brewer.pal(7, "Paired"))
 #' 
 #' @export
-rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colNA="gray") {
+rasterWidget <- function(raster, width = 400, height = 400, nclass, style="fisher", colors, colorsToInterpolate=c("yellow", "red"), colNA="gray") {
 
   if(!missing(nclass) && !missing(colors)  && nclass != length(colors) )
     stop("Provide equal number of classes and colors.")
   
   rasterValues = values(raster)
+  rasterValuesWithoutNAs = na.omit(rasterValues)
   
   if(missing(nclass))
-    nclass = nclass.Sturges(na.omit(rasterValues))
+    nclass = nclass.Sturges(rasterValuesWithoutNAs)
     
   if(missing(colors))
-    colors = colorRampPalette(c("yellow", "red"))(nclass)
+    colors = colorRampPalette(colorsToInterpolate)(nclass)
   
-  classIntervals = classIntervals(na.omit(rasterValues), n=nclass, style=style)
+  classIntervals = classIntervals(rasterValuesWithoutNAs, n=nclass, style=style)
 
   # forward options using data
   data = list(

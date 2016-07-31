@@ -5,7 +5,7 @@
 \title{View raster objects interactively}
 \usage{
 rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
-  colors, colNA = "gray")
+  colors, colorsToInterpolate = c("yellow", "red"), colNA = "gray")
 }
 \arguments{
 \item{raster}{a \code{Raster*} object.}
@@ -21,6 +21,8 @@ rasterWidget(raster, width = 400, height = 400, nclass, style = "fisher",
 \item{colors}{a character vector for color coding the class intervals}
 
 \item{colNA}{character for the color of NA values}
+
+\item{colorToInterpolate}{colors to interpolate}
 }
 \description{
 this function produces an interactive view of the specified
@@ -34,6 +36,9 @@ rasterWidget(meuseRaster)
 rasterWidget(meuseRaster, 500, 550)
 rasterWidget(meuseRaster, nclass=5)
 rasterWidget(meuseRaster, nclass=5, colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
+rasterWidget(meuseRaster, colorsToInterpolate=c("green", "red"))
+require(RColorBrewer)
+rasterWidget(meuseRaster, colorsToInterpolate=brewer.pal(7, "Paired"))
 
 }
 
