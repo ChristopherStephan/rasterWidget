@@ -12,4 +12,6 @@ Imports:
     raster,
     classInt,
     stats
+Suggests:
+    RColorBrewer
 RoxygenNote: 5.0.1
