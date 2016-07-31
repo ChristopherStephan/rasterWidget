@@ -16,7 +16,7 @@
 #' @param nclass number of classes required 
 #' @param style chosen style: one of "fixed", "sd", "equal", "pretty", "quantile", "kmeans", "hclust", "bclust", "fisher", or "jenks"
 #' @param colors a character vector for color coding the class intervals
-#' @param colorToInterpolate colors to interpolate
+#' @param colorsToInterpolate colors to interpolate
 #' @param colNA character for the color of NA values
 #' 
 #' @examples
