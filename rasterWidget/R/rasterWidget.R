@@ -28,7 +28,7 @@
 #' rasterWidget(meuseRaster, nclass=5)
 #' rasterWidget(meuseRaster, nclass=5, colors=c('yellow', 'orange', 'darkorange', 'red', 'darkred'))
 #' rasterWidget(meuseRaster, colorsToInterpolate=c("green", "red"))
-#' require(RColorBrewer)
+#' library(RColorBrewer)
 #' rasterWidget(meuseRaster, colorsToInterpolate=brewer.pal(7, "Paired"))
 #' 
 #' @export
