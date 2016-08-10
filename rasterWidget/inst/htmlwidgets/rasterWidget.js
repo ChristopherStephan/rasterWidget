@@ -5,13 +5,16 @@ HTMLWidgets.widget({
   name: 'rasterWidget',
   type: 'output',
   initialize: function(el, width, height) {
-    return {
+        return {
       // TODO: add instance fields as required
     }
   },
 
   renderValue: function(el, data, instance) {
-
+     //$.getScript("https://code.jquery.com/ui/1.12.0/jquery-ui.js");
+     $(document).tooltip({show: {effect:"none", delay:0}});
+     
+    
     var dat = data.values;
     var classBreaks = data.classBreaks;
     var colors = data.colors;

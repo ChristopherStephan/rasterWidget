@@ -5,6 +5,7 @@ install.packages("classInt")
 install.packages("rgdal")
 install.packages("roxygen2")
 install.packages("covr")
+install.packages("RColorBrewer")
 
 use_travis('/Users/christopherstephan/Documents/git/rasterWidget/rasterWidget')
 devtools::document()
