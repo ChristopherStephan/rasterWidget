@@ -37,18 +37,36 @@ HTMLWidgets.widget({
         .call(d3.behavior.zoom().on("zoom", zoom))
         .append("g");
 
-    svg.selectAll("rect")
+    var rect = svg.selectAll("rect")
         .data(d3.range(dat.length))
-        .enter().append("rect")
+        .enter().append("g");
+        
+    rect.append("rect")
         .attr("transform", translate)
         .attr("width", z)
         .attr("height", z)
         .style("fill", colorize)
         .append("svg:title")
         .text(getCellValue);
+    
+    rect.append("text")
+        .text(getCellValue)
+        .attr("x", getX)
+        .attr("y", getY)
+        /*.attr("alignment-baseline", "middle")
+        .attr("text-anchor", "middle")*/
+        .attr("font-size", "2");
 
     function translate(d) {
         return "translate(" + (d % x) * z + "," + Math.floor(d / x) * z + ")";
+    }
+    
+    function getX(d) {
+        return (d % x) * z;
+    }
+    
+    function getY(d){
+       return (Math.floor(d / x) * z) + 1;
     }
 
     function zoom() {
@@ -66,7 +84,7 @@ HTMLWidgets.widget({
     }
 
     function getCellValue(d) {
-      return dat[d];
+      return Math.floor(dat[d]);
     }
   },
 
